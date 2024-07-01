@@ -2,7 +2,7 @@
 
 ## API
 
-This project is a simple API that returns a list of food trucks in San Francisco. The API has two endpoints, one to return a list of food trucks and another to return a list of food trucks near a given location.
+This project is a simple API that returns a list of food trucks in San Francisco. The API has two endpoints, one to return a food truck location give it's database id and another to return a list of food trucks near a given location.
 
 ### Endpoints
 
