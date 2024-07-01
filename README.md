@@ -30,19 +30,19 @@ sudo docker compose up -d
 ## Install API server dependencies
 
 ```bash
-sudo docker compose exec "php container id" composer install
+sudo docker exec "php container id" composer install
 ```
 
 ## Run the migrations
 
 ```bash
-sudo docker compose exec "php container id" php artisan migrate
+sudo docker exec "php container id" php artisan migrate
 ```
 
 ## Run the seeders
 
 ```bash
-sudo docker compose exec "php container id" php artisan db:seed
+sudo docker exec "php container id" php artisan db:seed --class=LocationSeeder
 ```
 
 ## Run the frontend
