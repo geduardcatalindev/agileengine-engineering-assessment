@@ -1,28 +1,62 @@
-# Start the API server
+# Description
+
+## API
+
+This project is a simple API that returns a list of food trucks in San Francisco. The API has two endpoints, one to return a list of food trucks and another to return a list of food trucks near a given location.
+
+### Endpoints
+
+```bash
+/location/{id} - Returns the location with id {id}.
+```
+
+```bash
+/location?latitude={latitude}&longitude={longitude}&radius={radius} - Returns truck locations in the {radius} of the given location ({latitude} and {longitude} position).
+```
+
+## Frontend
+
+The frontend is a simple web page that shows a table with the food trucks near the user's specified location.
+By default, all the food trucks in San Francisco are shown, but it can be filtered with form inputs {latitude}, {longitude} and {radius}.
+
+# How to run the project
+
+## Start the API server
+
 ```bash
 sudo docker compose up -d
 ```
 
-# Install API server dependencies
+## Install API server dependencies
+
 ```bash
 sudo docker compose exec "php container id" composer install
 ```
 
-# Run the migrations
+## Run the migrations
+
 ```bash
 sudo docker compose exec "php container id" php artisan migrate
 ```
 
-# Run the seeders
+## Run the seeders
+
 ```bash
 sudo docker compose exec "php container id" php artisan db:seed
 ```
 
-# Run the frontend
+## Run the frontend
+
 ```bash
 cd frontend
 npm install
 npm run start
+```
+
+## Visit the frontend
+
+```bash
+http://localhost:3000
 ```
 
 # Engineering Challenge
@@ -37,17 +71,17 @@ We realize that taking on this assignment represents a time commitment for you, 
 
 ## Challenge Guidelines
 
-* This is meant to be an assignment that you spend approximately two to three hours of focused coding. Do not feel that you need to spend extra time to make a good impression. Smaller amounts of high quality code will let us have a much better conversation than large amounts of low quality code.
+-   This is meant to be an assignment that you spend approximately two to three hours of focused coding. Do not feel that you need to spend extra time to make a good impression. Smaller amounts of high quality code will let us have a much better conversation than large amounts of low quality code.
 
-* Think of this like an open source project. Create a repo on Github, use git for source control, and use a Readme file to document what you built for the newcomer to your project.
+-   Think of this like an open source project. Create a repo on Github, use git for source control, and use a Readme file to document what you built for the newcomer to your project.
 
-* We build systems engineered to run in production. Given this, please organize, design, test, deploy, and document your solution as if you were going to put it into production. We completely understand this might mean you can't do much in the time budget. Prioritize production-readiness over features.
+-   We build systems engineered to run in production. Given this, please organize, design, test, deploy, and document your solution as if you were going to put it into production. We completely understand this might mean you can't do much in the time budget. Prioritize production-readiness over features.
 
-* Think out loud in your documentation. Write our tradeoffs, the thoughts behind your choices, or things you would do or do differently if you were able to spend more time on the project or do it a second time.
+-   Think out loud in your documentation. Write our tradeoffs, the thoughts behind your choices, or things you would do or do differently if you were able to spend more time on the project or do it a second time.
 
-* We have a variety of languages and frameworks that we use, but we don't expect you to know them ahead of time. For this assignment you can make whatever choices that let you express the best solution to the problem given your knowledge and favorite tools without any restriction. Please make sure to document how to get started with your solution in terms of setup so that we'd be able to run it.
+-   We have a variety of languages and frameworks that we use, but we don't expect you to know them ahead of time. For this assignment you can make whatever choices that let you express the best solution to the problem given your knowledge and favorite tools without any restriction. Please make sure to document how to get started with your solution in terms of setup so that we'd be able to run it.
 
-* Once this is functioning and documented to your liking, either send us a link to your public repo or compress the project directory, give the file a pithy name which includes your own name, and send the file to us.
+-   Once this is functioning and documented to your liking, either send us a link to your public repo or compress the project directory, give the file a pithy name which includes your own name, and send the file to us.
 
 ## The Challenge
 
@@ -61,4 +95,3 @@ Your assignment is to make it possible for our teams to do something interesting
 
 This is a freeform assignment. You can write a web API that returns a set of food trucks. You can write a web frontend that visualizes the nearby food trucks for a given place. You can create a CLI that lets us get the names of all the taco trucks in the city. You can create system that spits out a container with a placeholder webpage featuring the name of each food truck to help their marketing efforts. You're not limited by these ideas at all, but hopefully those are enough help spark your own creativity.
 San Francisco's food truck open dataset is [located here](https://data.sfgov.org/Economy-and-Community/Mobile-Food-Facility-Permit/rqzj-sfat/data) and there is an endpoint with a [CSV dump of the latest data here](https://data.sfgov.org/api/views/rqzj-sfat/rows.csv). We've also included a copy of the data in this repo as well.
-
