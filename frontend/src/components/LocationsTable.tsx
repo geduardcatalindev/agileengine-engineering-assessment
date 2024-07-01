@@ -33,10 +33,10 @@ export default function LocationsTable({
         let searchParams = "";
 
         if (
-            searchTerms !== undefined &&
-            searchTerms.radius !== undefined &&
-            searchTerms.latitude !== undefined &&
-            searchTerms.longitude !== undefined
+            searchTerms != undefined &&
+            searchTerms.radius != undefined &&
+            searchTerms.latitude != undefined &&
+            searchTerms.longitude != undefined
         ) {
             searchParams =
                 `?radius=${searchTerms.radius}&latitude=${searchTerms.latitude}&longitude=${searchTerms.longitude}` as string;
@@ -54,7 +54,7 @@ export default function LocationsTable({
             <table>
                 <thead>
                     <tr>
-                        <td>Name</td>
+                        <td>Applicant</td>
                         <td>Latitude</td>
                         <td>Longitude</td>
                         <td>Food Items</td>
