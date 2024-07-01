@@ -1,0 +1,10 @@
+name: Build and Upload APK
+run-name: Build and Upload APK
+on: [ push ]
+jobs:
+  Build-And-Upload-APK:
+    if: github.ref == 'refs/heads/release'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3

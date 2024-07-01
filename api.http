@@ -1,0 +1,5 @@
+GET http://localhost/api/location?latitude=37.805885350100986&longitude=-122.41594524663745&radius=1 HTTP/1.1
+
+###
+
+GET http://localhost/api/location/1 HTTP/1.1

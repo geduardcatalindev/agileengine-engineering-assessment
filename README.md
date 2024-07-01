@@ -1,3 +1,30 @@
+# Start the API server
+```bash
+sudo docker compose up -d
+```
+
+# Install API server dependencies
+```bash
+sudo docker compose exec "php container id" composer install
+```
+
+# Run the migrations
+```bash
+sudo docker compose exec "php container id" php artisan migrate
+```
+
+# Run the seeders
+```bash
+sudo docker compose exec "php container id" php artisan db:seed
+```
+
+# Run the frontend
+```bash
+cd frontend
+npm install
+npm run start
+```
+
 # Engineering Challenge
 
 We strive to be a practical and pragmatic team. That extends to the way that we work with you to understand if this team is a great fit for you. We want you to come away with a great understanding of the kind of things that we actually do day to day and what it is like to work in our teams.
@@ -34,3 +61,4 @@ Your assignment is to make it possible for our teams to do something interesting
 
 This is a freeform assignment. You can write a web API that returns a set of food trucks. You can write a web frontend that visualizes the nearby food trucks for a given place. You can create a CLI that lets us get the names of all the taco trucks in the city. You can create system that spits out a container with a placeholder webpage featuring the name of each food truck to help their marketing efforts. You're not limited by these ideas at all, but hopefully those are enough help spark your own creativity.
 San Francisco's food truck open dataset is [located here](https://data.sfgov.org/Economy-and-Community/Mobile-Food-Facility-Permit/rqzj-sfat/data) and there is an endpoint with a [CSV dump of the latest data here](https://data.sfgov.org/api/views/rqzj-sfat/rows.csv). We've also included a copy of the data in this repo as well.
+
