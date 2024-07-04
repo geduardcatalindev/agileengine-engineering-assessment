@@ -21,6 +21,8 @@ By default, all the food trucks in San Francisco are shown, but it can be filter
 
 # How to run the project
 
+Make a copy of the .env.example file and rename it to .env
+
 ## Start the API server
 
 ```bash
